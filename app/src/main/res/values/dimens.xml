@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="itemiconsize">25dp</dimen>
+    <dimen name="toolbartext">20dp</dimen>
+    <dimen name="padding_total">5dp</dimen>
+    <dimen name="discover_toolbar">3dp</dimen>
+</resources>
