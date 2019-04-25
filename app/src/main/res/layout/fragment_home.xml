@@ -52,7 +52,6 @@
                 android:layout_weight="1"
                 android:background="@color/positive_total"
                 android:src="@drawable/menu_2_24px" />
-
         </LinearLayout>
 
     </android.support.v7.widget.Toolbar>

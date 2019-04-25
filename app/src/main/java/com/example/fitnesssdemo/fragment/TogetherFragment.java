@@ -30,4 +30,7 @@ public class TogetherFragment extends Fragment {
         return view;
     }
 }
+/**
+ * A simple {@link Fragment} subclass.
+ */
 
