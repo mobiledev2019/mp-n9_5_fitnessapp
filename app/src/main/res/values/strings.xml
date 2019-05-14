@@ -1,6 +1,20 @@
 <resources>
     <string name="app_name">FitnesssDemo</string>
-    <string name="home">Sức khỏe</string>
-    <string name="together">Bạn bè</string>
-    <string name="discover">Khám phá</string>
+    <string name="home">Health</string>
+    <string name="together">Together</string>
+    <string name="discover">Discover</string>
+    <string name="tillte_step">Starting walking and grow your step count!</string>
+    <string name="tillet1_step">-----------------------------------------------</string>
+    <string name="tillet2_step">12AM     12PM     12AM</string>
+    <string name="exercise">Exercise</string>
+    <string name="water">Water</string>
+    <string name="food">Food</string>
+    <string name="manager">Weight management</string>
+    <string name="target">Set your target weight.</string>
+    <string name="record">Record</string>
+    <string name="start">Start</string>
+    <string name="add">Add</string>
+    <string name="food_default">/2150kcal</string>
+    <string name="water_default">/8 Glasses</string>
+    <string name="title_exercise">A healthy outside starts from the inside.y</string>
 </resources>

@@ -4,4 +4,11 @@
     <dimen name="toolbartext">20dp</dimen>
     <dimen name="padding_total">5dp</dimen>
     <dimen name="discover_toolbar">3dp</dimen>
+    <dimen name="boder">8dp</dimen>
+    <dimen name="magin">4dp</dimen>
+    <dimen name="scoll">0dp</dimen>
+    <dimen name="padding_drawable">10dp</dimen>
+    <dimen name="cornor">15dp</dimen>
+    <dimen name="magin_left">40dp</dimen>
+    <dimen name="textzise_foodwater">30dp</dimen>
 </resources>
