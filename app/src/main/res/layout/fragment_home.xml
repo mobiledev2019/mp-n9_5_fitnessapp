@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="-2dp"
+        android:layout_marginTop="2dp"
         android:background="@color/positive_total"
         android:padding="@dimen/padding_total"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
@@ -83,7 +83,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="@dimen/line200dp"
                 android:layout_margin="@dimen/magin"
                 android:background="@drawable/boder_boder"
                 android:orientation="vertical">
@@ -121,7 +121,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
+                android:layout_height="@dimen/line100dp"
                 android:layout_margin="@dimen/magin"
                 android:background="@drawable/boder_boder"
                 android:orientation="vertical">
@@ -167,7 +167,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
+                android:layout_height="@dimen/line100dp"
                 android:layout_margin="@dimen/magin"
                 android:background="@drawable/boder_boder"
                 android:orientation="vertical">
@@ -235,7 +235,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
+                android:layout_height="@dimen/line100dp"
                 android:layout_margin="@dimen/magin"
                 android:background="@drawable/boder_boder"
                 android:orientation="vertical">
@@ -294,7 +294,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
+                android:layout_height="@dimen/line100dp"
                 android:layout_margin="@dimen/magin"
                 android:background="@drawable/boder_boder"
                 android:orientation="vertical">

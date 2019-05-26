@@ -11,4 +11,7 @@
     <dimen name="cornor">15dp</dimen>
     <dimen name="magin_left">40dp</dimen>
     <dimen name="textzise_foodwater">30dp</dimen>
+    <dimen name="line200dp">200dp</dimen>
+    <dimen name="line100dp">100dp</dimen>
+    <dimen name="line50dp">50dp</dimen>
 </resources>
