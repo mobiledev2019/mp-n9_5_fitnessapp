@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="itemiconsize">25dp</dimen>
+    <dimen name="toolbartext">20dp</dimen>
+    <dimen name="padding_total">5dp</dimen>
+    <dimen name="discover_toolbar">3dp</dimen>
+    <dimen name="boder">8dp</dimen>
+    <dimen name="magin">4dp</dimen>
+    <dimen name="scoll">0dp</dimen>
+    <dimen name="padding_drawable">10dp</dimen>
+    <dimen name="cornor">15dp</dimen>
+    <dimen name="magin_left">40dp</dimen>
+    <dimen name="textzise_foodwater">30dp</dimen>
+    <dimen name="line200dp">200dp</dimen>
+    <dimen name="line100dp">100dp</dimen>
+    <dimen name="line50dp">50dp</dimen>
+</resources>
