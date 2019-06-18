@@ -9,6 +9,23 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".WalkActivity"></activity>
+        <activity
+            android:name=".WeightManagementActivity"
+            android:label="@string/title_activity_weight_management"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".WaterActivity"
+            android:label="@string/title_activity_water"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".FoodActivity"
+            android:label="@string/title_activity_food"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ExcerciseActivity"
+            android:label="@string/title_activity_excercise"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

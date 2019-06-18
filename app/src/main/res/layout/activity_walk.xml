@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgBottomNavigation"
+    tools:context=".WalkActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="2dp"
+        android:background="@color/bgBottomNavigation"
+        android:padding="@dimen/padding_total"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <LinearLayout
+            android:id="@+id/liner_walk"
+            android:clickable="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="10">
+
+            <ImageButton
+                android:id="@+id/button_back_walk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/bgBottomNavigation"
+                android:src="@drawable/back_25px"/>
+
+            <TextView
+                android:id="@+id/text_back_walk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/walk"
+                android:textColor="@color/title_text_total"
+                android:textSize="@dimen/toolbartext"
+                android:textStyle="normal" />
+
+        </LinearLayout>
+    </android.support.v7.widget.Toolbar>
+
+
+    <ScrollView
+        android:layout_below="@id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/scoll"
+        android:layout_marginEnd="@dimen/scoll"
+        android:layout_marginBottom="@dimen/scoll"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/boder"
+            android:layout_marginLeft="@dimen/boder"
+            android:layout_marginEnd="@dimen/boder"
+            android:layout_marginRight="@dimen/boder"
+            android:layout_marginBottom="@dimen/boder"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/magin"
+                android:orientation="vertical">
+
+                <TextView
+                    android:paddingTop="100dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Steps"
+                    android:textStyle="bold"
+                    android:textSize="50dp"/>
+
+                <TextView
+                    android:id="@+id/stepsValue"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textSize="50dp"/>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-----------------------------------------------"
+                android:layout_gravity="center"
+                android:textSize="20dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/magin"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Km : "
+                    android:textStyle="bold"
+                    android:textSize="30dp"/>
+
+                <TextView
+                    android:id="@+id/km_run"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="0"
+                    android:textSize="30dp"/>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-----------------------------------------------"
+                android:layout_gravity="center"
+                android:textSize="20dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/magin"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kcal : "
+                    android:textStyle="bold"
+                    android:textSize="30dp"/>
+
+                <TextView
+                    android:id="@+id/kcal_run"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="0"
+                    android:textSize="30dp"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingTop="20dp"
+                android:orientation="horizontal">
+
+
+                <Button
+                    android:id="@+id/save"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Lưu"/>
+
+                <Button
+                    android:id="@+id/reset"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Làm mới"/>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,51 +1,84 @@
 package com.example.fitnesssdemo;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.design.widget.BottomNavigationView;
+import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
-import android.view.MenuItem;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.view.ViewPager;
+import android.support.v7.app.AppCompatActivity;
 
 import com.example.fitnesssdemo.fragment.DiscoverFragment;
 import com.example.fitnesssdemo.fragment.HomeFragment;
-import com.example.fitnesssdemo.fragment.TogetherFragment;
 
+import java.util.ArrayList;
+import java.util.List;
 public class MainActivity extends AppCompatActivity {
+
+    TabLayout tabLayout;
+    ViewPager viewPager;
+
+    private int[] tabIcons = {
+            R.drawable.home_25px,
+            R.drawable.nearme_25px
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        tabLayout = (TabLayout) findViewById(R.id.tabs);
+        viewPager= (ViewPager) findViewById(R.id.viewpager);
 
-        BottomNavigationView bottonNav = findViewById(R.id.navigation);
-        bottonNav.setOnNavigationItemSelectedListener(navListener);
+        setupViewPager(viewPager);
+        tabLayout.setupWithViewPager(viewPager);
+        setupTabIcons();
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.frame_container,new HomeFragment()).commit();
     }
 
-    private BottomNavigationView.OnNavigationItemSelectedListener navListener
-            = new BottomNavigationView.OnNavigationItemSelectedListener() {
-                @Override
-                public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                    Fragment selectFragment = null;
-                    switch (item.getItemId()) {
-                        case R.id.home: ;
-                            selectFragment = new HomeFragment();
-                            break;
-                        case R.id.together:
-                            selectFragment = new TogetherFragment();
-                            break;
-                        case R.id.discover:
-                            selectFragment = new DiscoverFragment();
-                            break;
-                    }
-                    getSupportFragmentManager().beginTransaction().replace(R.id.frame_container,
-                            selectFragment).commit();
+    private void setupViewPager(ViewPager viewPager) {
+        ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
+        adapter.addFragment(new HomeFragment(), "Home");
+        adapter.addFragment(new DiscoverFragment(), "Discover");
 
-                    return true;
-                }
-            };
+        viewPager.setAdapter(adapter);
+        viewPager.setOffscreenPageLimit(2);
+    }
 
+    private void setupTabIcons() {
+        tabLayout.getTabAt(0).setIcon(tabIcons[0]);
+        tabLayout.getTabAt(1).setIcon(tabIcons[1]);
+    }
+
+    class ViewPagerAdapter extends FragmentPagerAdapter {
+
+        private final List<Fragment> mFragmentList = new ArrayList<>();
+        private final List<String> mFragmentTitleList = new ArrayList<>();
+
+        public ViewPagerAdapter(FragmentManager manager) {
+            super(manager);
+        }
+
+        @Override
+        public Fragment getItem(int position) {
+            return mFragmentList.get(position);
+        }
+
+        @Override
+        public int getCount() {
+            return mFragmentList.size();
+        }
+
+        public void addFragment(Fragment fragment, String title) {
+            mFragmentList.add(fragment);
+            mFragmentTitleList.add(title);
+        }
+
+        @Override
+        public CharSequence getPageTitle(int position) {
+            return mFragmentTitleList.get(position);
+        }
+
+    }
 
 }

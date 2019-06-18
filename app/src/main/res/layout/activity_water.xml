@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bgBottomNavigation"
-    tools:context=".fragment.WaterFragment">
+    tools:context=".WaterActivity">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolBar"
@@ -16,26 +16,28 @@
         android:padding="@dimen/padding_total"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:weightSum="10">
-
-        <ImageButton
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:id="@+id/linear_water_back"
+            android:clickable="true"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/bgBottomNavigation"
-            android:src="@drawable/back_25px"/>
+            android:weightSum="10">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/water"
-            android:textColor="@color/title_text_total"
-            android:textSize="@dimen/toolbartext"
-            android:textStyle="normal" />
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/bgBottomNavigation"
+                android:src="@drawable/back_25px"/>
 
-    </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/water"
+                android:textColor="@color/title_text_total"
+                android:textSize="@dimen/toolbartext"
+                android:textStyle="normal" />
+
+        </LinearLayout>
     </android.support.v7.widget.Toolbar>
 
 
@@ -60,12 +62,12 @@
             android:layout_marginEnd="@dimen/boder"
             android:layout_marginRight="@dimen/boder"
             android:layout_marginBottom="@dimen/boder"
+            android:layout_gravity="center"
             android:orientation="vertical">
 
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:paddingTop="@dimen/line200dp"
                 android:layout_gravity="center"
                 android:background="@color/bgBottomNavigation"
                 android:src="@drawable/water_glass_127px"/>
@@ -80,6 +82,7 @@
 
 
                 <ImageButton
+                    android:id="@+id/minus_water"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="5"
@@ -87,6 +90,7 @@
                     android:src="@drawable/minus_math_50px"/>
 
                 <ImageButton
+                    android:id="@+id/plus_water"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="5"
@@ -95,30 +99,54 @@
 
             </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:weightSum="10">
-
-            <TextView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="right"
-                android:layout_weight="5"
-                android:textStyle="bold"
-                android:text="0"
-                android:textSize="@dimen/magin_left"/>
+                android:orientation="horizontal"
+                android:weightSum="10">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="left"
-                android:layout_weight="5"
-                android:text="@string/water_default"
-                android:textSize="@dimen/toolbartext"/>
-        </LinearLayout>
+                <TextView
+                    android:id="@+id/text_water"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:layout_weight="5"
+                    android:textStyle="bold"
+                    android:text="0"
+                    android:textSize="@dimen/magin_left"/>
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:layout_weight="5"
+                    android:text="@string/water_default"
+                    android:textSize="@dimen/toolbartext"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingTop="20dp"
+                android:orientation="horizontal">
+
+
+                <Button
+                    android:id="@+id/save"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Lưu"/>
+
+                <Button
+                    android:id="@+id/reset"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Làm mới"/>
+
+            </LinearLayout>
         </LinearLayout>
     </ScrollView>
 
