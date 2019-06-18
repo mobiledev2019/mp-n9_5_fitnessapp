@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "66528631018",
+    "firebase_url": "https://ecommerce-9dfb8.firebaseio.com",
+    "project_id": "ecommerce-9dfb8",
+    "storage_bucket": "ecommerce-9dfb8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:66528631018:android:9d5c50b33a4a61ee",
+        "android_client_info": {
+          "package_name": "com.example.fitnesssdemo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "66528631018-ndh3hbfud25pr3533o3l0k9ekloda2d7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.fitnesssdemo",
+            "certificate_hash": "e067468037b1c14373e7fa6f50fc7f9c96e131c3"
+          }
+        },
+        {
+          "client_id": "66528631018-i8uv3enjen0et1bhrh8bosn52uin7r0q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD5BYm8clCfrASnnRVKTR2GUvnXrgAoKJU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "66528631018-i8uv3enjen0et1bhrh8bosn52uin7r0q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

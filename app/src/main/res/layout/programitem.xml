@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_height="150dp"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView
+        android:id="@+id/image"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_width="150dp"
+        android:background="#FFA"
+        android:layout_height="match_parent" />
+    <TextView
+        android:text="day la bai tap 1"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:id="@+id/program_name"
+        android:layout_toRightOf="@id/image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/description"
+        android:textSize="20dp"
+        android:text="description"
+        android:layout_toRightOf="@id/image"
+        android:layout_below="@+id/program_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+</RelativeLayout>
