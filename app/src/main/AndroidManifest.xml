@@ -2,6 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.fitnesssdemo">
 
+    <uses-feature
+        android:name="android.hardware.sensor.stepcounter"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.sensor.stepdetector"
+        android:required="true" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,10 +16,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".WalkActivity"></activity>
-        <activity android:name=".ListExercises">
-        </activity>
-        <activity android:name=".DisplayExercise"></activity>
+        <activity
+            android:name=".WalkActivity"
+            android:label="@string/title_activity_walk"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".ListExercises"></activity>
+        <activity android:name=".DisplayExercise" />
         <activity
             android:name=".WeightManagementActivity"
             android:label="@string/title_activity_weight_management"
