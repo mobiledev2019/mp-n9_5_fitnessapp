@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".WalkActivity"></activity>
+        <activity android:name=".ListExercises">
+        </activity>
+        <activity android:name=".DisplayExercise"></activity>
         <activity
             android:name=".WeightManagementActivity"
             android:label="@string/title_activity_weight_management"

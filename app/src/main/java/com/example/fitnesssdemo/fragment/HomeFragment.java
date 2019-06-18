@@ -19,6 +19,7 @@ import android.widget.Toast;
 
 import com.example.fitnesssdemo.ExcerciseActivity;
 import com.example.fitnesssdemo.FoodActivity;
+import com.example.fitnesssdemo.ListExercises;
 import com.example.fitnesssdemo.R;
 import com.example.fitnesssdemo.WalkActivity;
 import com.example.fitnesssdemo.WaterActivity;
@@ -30,6 +31,8 @@ import com.example.fitnesssdemo.WeightManagementActivity;
 public class HomeFragment extends Fragment {
 
     private Dialog dialog;
+    private TextView txtStart;
+    private View view;
     LinearLayout linear_walk;
     LinearLayout linear_excercise;
     LinearLayout linear_water;
@@ -54,6 +57,15 @@ public class HomeFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
+        txtStart = view.findViewById(R.id.startbtn);
+        txtStart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), ListExercises.class);
+                startActivity(intent);
+            }
+        });
+
 
         linear_walk = (LinearLayout) view.findViewById (R.id.linear_walk);
         linear_excercise = (LinearLayout) view.findViewById (R.id.linear_excercise);
