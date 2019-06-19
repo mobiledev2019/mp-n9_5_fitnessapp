@@ -24,10 +24,10 @@ public class programListShow extends AppCompatActivity {
         recyclerView = findViewById(R.id.recycleview);
         List <Program> programList = new ArrayList<>();
 
-        programList.add(new Program("Chuong trnh 1", "22222", "", "noi dung la"));
-        programList.add(new Program("Chuong trnh 1", "22222", "", "noi dung la"));
-        programList.add(new Program("Chuong trnh 1", "22222", "", "noi dung la"));
-        programList.add(new Program("Chuong trnh 1", "22222", "", "noi dung la"));
+        programList.add(new Program("Chương trình số 1", "22222", "", "noi dung la"));
+        programList.add(new Program("Chương trình số 2", "22222", "", "noi dung la"));
+        programList.add(new Program("Chương trình số 3", "22222", "", "noi dung la"));
+        programList.add(new Program("Chương trình số 4", "22222", "", "noi dung la"));
 
         programListAdapter = new ProgramListAdapter(programList);
         recyclerView.setAdapter(programListAdapter);

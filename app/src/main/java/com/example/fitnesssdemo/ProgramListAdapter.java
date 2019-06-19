@@ -28,6 +28,7 @@ public class ProgramListAdapter extends RecyclerView.Adapter<ProgramListAdapter.
         Program program = list.get(i);
         programViewHolder.programName.setText(program.getProgramName());
         programViewHolder.description.setText(program.getDes());
+        programViewHolder.image
 
     }
 
