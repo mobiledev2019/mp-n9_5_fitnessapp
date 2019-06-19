@@ -1,46 +1,200 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView android:layout_height="match_parent"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/positive_total"
-    tools:context=".fragment.DiscoverFragment">
-
-    <android.support.v7.widget.Toolbar
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        android:background="@color/bgBottomNavigation"
-        android:id="@+id/toolBar"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_height="match_parent"
+        android:background="#FFF"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginBottom="@dimen/discover_toolbar"
-        android:padding="@dimen/padding_total">
-
-        <LinearLayout
-            android:weightSum="10"
+        android:orientation="vertical"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+        <android.support.v7.widget.Toolbar
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            android:background="@color/positive_total"
+            android:id="@+id/toolBar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:padding="@dimen/padding_total"
+            android:layout_alignParentTop="true">
 
-            <TextView
-                android:textSize="@dimen/toolbartext"
-                android:textColor="@color/title_text_total"
-                android:text="@string/discover"
-                android:textStyle="normal"
-                android:layout_weight="9"
-                android:layout_width="0dp"
-                android:layout_height="match_parent" />
-
-            <ImageButton
-                android:id="@+id/imagebutton"
-                android:layout_width="0dp"
+            <LinearLayout
+                android:weightSum="10"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@color/bgBottomNavigation"
-                android:src="@drawable/menu_2_32px" />
+                android:orientation="horizontal">
 
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="9"
+                    android:text="@string/discover"
+                    android:textColor="@color/title_text_total"
+                    android:textSize="@dimen/toolbartext"
+                    android:textStyle="normal" />
+
+                <ImageButton
+                    android:id="@+id/imagebutton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/positive_total"
+                    android:src="@drawable/menu_2_32px" />
+
+            </LinearLayout>
+
+        </android.support.v7.widget.Toolbar>
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+
+            <Button
+                android:drawableLeft="@mipmap/ic_program1"
+                android:id="@+id/button_program"
+                android:layout_marginRight="20dp"
+                android:background="#FFF"
+                android:text=" Chương trình tập"
+                android:textAllCaps="false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:textAllCaps="false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:background="#FFF"
+                android:drawableLeft="@mipmap/ic_product"
+                android:text="  Sản phẩm" />
         </LinearLayout>
 
-    </android.support.v7.widget.Toolbar>
+        <LinearLayout
+            android:background="#AAA"
+            android:layout_width="match_parent"
+            android:layout_height="2dp">
+        </LinearLayout>
 
-</RelativeLayout>
+        <LinearLayout
+            android:id="@+id/popular_program"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="220dp">
+            <Button
+                android:textAllCaps="false"
+                android:paddingLeft="10dp"
+                android:drawableLeft="@mipmap/ic_play"
+                android:drawableRight="@mipmap/ic_right_arrow"
+                android:text="  Các chương trình phổ biến                                 "
+                android:background="#FFF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:id="@+id/popular_program_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageButton
+                    android:id="@+id/btn_pre"
+                    android:background="#FFF"
+                    android:layout_weight="1"
+                    android:src="@mipmap/ic_left_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+                <ViewFlipper
+                    android:layout_weight="3"
+                    android:id="@+id/viewFlipper"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/image1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                    <ImageView
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/image2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                    <ImageView
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/image1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                </ViewFlipper>
+                <ImageButton
+                    android:id="@+id/btn_next"
+                    android:background="#FFF"
+                    android:layout_weight="1"
+                    android:src="@mipmap/ic_right_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:background="#AAA"
+            android:layout_width="match_parent"
+            android:layout_height="2dp">
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/product"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="250dp">
+            <Button
+                android:id="@+id/button_product"
+                android:textAllCaps="false"
+                android:drawableLeft="@mipmap/ic_product_2"
+                android:paddingLeft="10dp"
+                android:drawableRight="@mipmap/ic_right_arrow"
+                android:text="              Các sản phẩm                                                                "
+                android:background="#FFF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:id="@+id/product_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageButton
+                    android:id="@+id/btn_product_pre"
+                    android:background="#FFF"
+                    android:layout_weight="1"
+                    android:src="@mipmap/ic_left_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+                <ViewFlipper
+                    android:layout_weight="3"
+                    android:id="@+id/viewFlipper2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/pro1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                    <ImageView
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/pro2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                    <ImageView
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/pro3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                </ViewFlipper>
+                <ImageButton
+                    android:id="@+id/btn_product_next"
+                    android:background="#FFF"
+                    android:layout_weight="1"
+                    android:src="@mipmap/ic_right_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
