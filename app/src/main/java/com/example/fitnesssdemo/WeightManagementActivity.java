@@ -4,23 +4,17 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.LinearLayout;
-import android.widget.Spinner;
-import android.widget.TextView;
-import android.widget.Toast;
 
 public class WeightManagementActivity extends AppCompatActivity  {
 
 
     LinearLayout linear_weight_back;
 
+
     Button see;
-    Button save;
     EditText after;
     EditText before;
     EditText calo_in;
@@ -44,7 +38,7 @@ public class WeightManagementActivity extends AppCompatActivity  {
         after_ = (EditText) findViewById(R.id.after_);
 
         see = (Button) findViewById(R.id.see);
-        save = (Button) findViewById(R.id.save);
+
 
 
 
@@ -80,12 +74,6 @@ public class WeightManagementActivity extends AppCompatActivity  {
             }
         });
 
-        save.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
     }
 
 

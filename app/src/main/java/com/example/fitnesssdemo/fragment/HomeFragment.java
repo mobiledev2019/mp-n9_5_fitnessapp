@@ -24,6 +24,10 @@ import com.example.fitnesssdemo.R;
 import com.example.fitnesssdemo.WalkActivity;
 import com.example.fitnesssdemo.WaterActivity;
 import com.example.fitnesssdemo.WeightManagementActivity;
+import com.example.fitnesssdemo.database.DBManagerFood;
+import com.example.fitnesssdemo.database.DBManagerWater;
+import com.example.fitnesssdemo.model.Food;
+import com.example.fitnesssdemo.model.Water;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -43,6 +47,8 @@ public class HomeFragment extends Fragment {
     ImageButton plus_water;
     ImageButton notice;
     TextView text_water;
+    TextView text_food;
+
 
 
     public HomeFragment(){
@@ -57,6 +63,8 @@ public class HomeFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
+        final DBManagerWater dbManagerWater = new DBManagerWater(getActivity());
+        final DBManagerFood dbManagerFood = new DBManagerFood(getActivity());
         txtStart = view.findViewById(R.id.startbtn);
         txtStart.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -76,9 +84,20 @@ public class HomeFragment extends Fragment {
         minus_water = (ImageButton) view.findViewById(R.id.minus_water_background);
         plus_water = (ImageButton) view.findViewById(R.id.plus_water_background);
         text_water = (TextView) view.findViewById(R.id.text_water_background);
+        text_food = (TextView) view.findViewById(R.id.text_food_background);
 
         notice = (ImageButton) view.findViewById(R.id.ideal);
 
+        Water water = dbManagerWater.getMaxWater();
+        if(water.getTotal()!=null){
+            text_water.setText(water.getTotal());
+        }
+
+
+        Food food = dbManagerFood.getMaxFood();
+        if(food.getTotal()!=null) {
+            text_food.setText(food.getTotal());
+        }
 
         notice.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -86,6 +105,7 @@ public class HomeFragment extends Fragment {
                 showAlertDialog();
             }
         });
+
 
         linear_walk.setOnClickListener(new View.OnClickListener() {
             @Override

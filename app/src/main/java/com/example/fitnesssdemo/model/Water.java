@@ -2,18 +2,18 @@ package com.example.fitnesssdemo.model;
 
 public class Water {
     private int ID;
-    private String values;
+    private String total;
 
     public Water() {
     }
 
-    public Water(String values) {
-        this.values = values;
+    public Water(String total) {
+        this.total = total;
     }
 
-    public Water(int ID, String values) {
+    public Water(int ID, String total) {
         this.ID = ID;
-        this.values = values;
+        this.total = total;
     }
 
     public int getID() {
@@ -24,19 +24,19 @@ public class Water {
         this.ID = ID;
     }
 
-    public String getValues() {
-        return values;
+    public String getTotal() {
+        return total;
     }
 
-    public void setValues(String values) {
-        this.values = values;
+    public void setTotal(String total) {
+        this.total = total;
     }
 
     @Override
     public String toString() {
         return "Water{" +
                 "ID=" + ID +
-                ", values='" + values + '\'' +
+                ", total=" + total +
                 '}';
     }
 }

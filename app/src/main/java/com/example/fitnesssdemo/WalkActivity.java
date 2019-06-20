@@ -17,7 +17,7 @@ public class WalkActivity extends AppCompatActivity implements SensorEventListen
     TextView kcal_run;
     SensorManager sensorManager;
     Sensor sensor;
-    boolean running = false;
+    boolean running;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,8 +35,8 @@ public class WalkActivity extends AppCompatActivity implements SensorEventListen
     protected void onResume() {
         super.onResume ();
         running = true;
-        Sensor countSensor = sensorManager.getDefaultSensor ( sensor.TYPE_STEP_COUNTER );
-        if(countSensor!= null){
+        Sensor countSensor = sensorManager.getDefaultSensor ( sensor.TYPE_ALL );
+        if(countSensor != null){
             sensorManager.registerListener ( this,countSensor,SensorManager.SENSOR_DELAY_UI );
         }else {
             Toast.makeText ( this,"SENSOR NOT FOUND",Toast.LENGTH_SHORT ).show ();
