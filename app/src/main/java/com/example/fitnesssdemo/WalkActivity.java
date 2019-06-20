@@ -35,9 +35,12 @@ public class WalkActivity extends AppCompatActivity implements SensorEventListen
     protected void onResume() {
         super.onResume ();
         running = true;
-        Sensor countSensor = sensorManager.getDefaultSensor ( sensor.TYPE_ALL );
+        Sensor countSensor = sensorManager.getDefaultSensor (sensor.TYPE_STEP_COUNTER);
+        Sensor detectorSensor = sensorManager.getDefaultSensor(Sensor.TYPE_STEP_DETECTOR);
         if(countSensor != null){
-            sensorManager.registerListener ( this,countSensor,SensorManager.SENSOR_DELAY_UI );
+            sensorManager.registerListener (WalkActivity.this,countSensor,SensorManager.SENSOR_DELAY_NORMAL);
+        }else if(detectorSensor != null){
+            sensorManager.registerListener (WalkActivity.this,detectorSensor,SensorManager.SENSOR_DELAY_NORMAL);
         }else {
             Toast.makeText ( this,"SENSOR NOT FOUND",Toast.LENGTH_SHORT ).show ();
         }
